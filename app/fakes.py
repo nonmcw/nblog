@@ -1,5 +1,5 @@
 from faker import Faker
-from app.models import Admin, Category, Post
+from app.models import Admin, Category, Post, Comment
 from app.extensions db
 
 fake = Faker()
@@ -7,12 +7,12 @@ fake = Faker()
 def fake_admin(class):
     admin = Admin(
         username = 'nblog',
-        blog_title = '',
-        blog_sub_title = '',
+        blog_title = 'nblog',
+        blog_sub_title = 'blog blog',
         name = 'Li Ning',
         about = '个人主页'
     )
-    admin.set_password('qian2020')
+    admin.set_password('20201111')
     db.session.add(admin)
     db.session.commit()
 
@@ -91,5 +91,3 @@ def fake_comments(count=500):
         )
         db.session.add(comment)
     db.session.commit()
-
-

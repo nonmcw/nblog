@@ -29,7 +29,7 @@ def register_logging(app):
     pass
 
 def register_blueprints(app):
-    app.register_blueprint(views_blueprint)
+    app.register_blueprint(views_blueprint, url_perfix='/views')
 
 def register_extensions(app):
     bootstrap.init_app(app)

@@ -1,10 +1,11 @@
+{% from 'bootstrap/nav.html' import render_nav_item %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
         {% block head %}
         <meta charset="utf-8">
-        <meta name="viewport", content="width=device-width, initail-scale=1, shrink-to-fit=no">
-        <title>{% block title %}{% endblock title %} - oneblog</title>
+        <meta name="viewport", content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>{% block title %}{% endblock title %} - {{ admin.blog.title|default('Blog Title') }}</title>
         <link rel="icon" herf="{{ url_for('static', filename='favicon.icon') }}">
         <link rel="stylesheet" herf="{{ url_for('static', filename='css/%s.min.css' % request.cookies.get('theme', 'perfact_blue')) }}"
             type="text/css">
@@ -22,9 +23,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarColor01">
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="/">Home</a>
-                        </li>
+                        {{ render_nav_item('blog.index', 'Home')}}
                     </ul>
                 </div>
             </div>
