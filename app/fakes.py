@@ -1,10 +1,10 @@
 from faker import Faker
 from app.models import Admin, Category, Post, Comment
-from app.extensions db
+from app.extensions import db
 
 fake = Faker()
 
-def fake_admin(class):
+def fake_admin():
     admin = Admin(
         username = 'nblog',
         blog_title = 'nblog',

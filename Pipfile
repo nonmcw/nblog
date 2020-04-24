@@ -1,6 +1,6 @@
 [[source]]
 name = "pypi"
-url = "https://pypi.org/simple"
+url = "https://pypi.mirrors.ustc.edu.cn/simple/"
 verify_ssl = true
 
 [dev-packages]
@@ -16,6 +16,7 @@ flask-mail = "*"
 bootstrap-flask = "*"
 flask-wtf = "*"
 psycopg2 = "*"
+faker = "*"
 
 [requires]
 python_version = "3.6"
